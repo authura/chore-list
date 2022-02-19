@@ -1,0 +1,91 @@
+window load event
+
+    grab chore-form DOM and assign to var form
+
+    grab chore-input DOM and assign to var input
+
+    grab chores DOM and assign to var choreList
+
+    form submit event
+
+        create function with event parameter
+
+         prevent page refresh
+
+         assign input value to var chore
+
+         if no chore entered(form is empty)
+
+            alert "Please enter a chore."
+
+            end function
+        
+        create div and assign it to var choreElement
+
+        add choreElement to classlist chore
+        
+        create div and assign to var contentElement
+
+        add contentElement to classlist content 
+
+        append contentElement to choreElement
+
+        create input and assign to var inputElement
+
+        add inputElement to classlist text
+
+        change inputElement type to text
+
+        append inputElement to contentElement
+
+        assign value of inputElement to var chore
+
+        set inputElement to readonly
+
+        create div and assign to var actionsElement
+
+        add actionsElement to classlist actions
+
+        create button and assign to var editElement
+
+        add editElement to classlist edit
+
+        set button text to edit
+
+        create button and assign to var deleteElement
+
+        add deleteElement to classlist delete
+
+        set deleteElement text to Del
+
+        append editElement to actionsElement
+
+        append deleteElement to actionsElement
+
+        append actionsElement to choreElement 
+
+        append choreElement to choreList
+
+        reset form
+
+        editElement click event
+
+            if editElement(case insensitive) says "edit"
+
+                remove readonly attribute
+
+                focus inputElement
+
+                set text to Save
+
+            else
+
+                set attribute to readonly
+
+                set text to Edit
+
+        deleteElement click event
+
+            remove choreElement from choreList            
+
+         
