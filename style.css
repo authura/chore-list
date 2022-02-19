@@ -1,0 +1,155 @@
+:root {
+    --primary: #9370db;
+    --dark: #6a5acd;
+    --darker: #4b0082;
+    --gold: #ffd700;
+    --light: #d3d3d3;
+    --dark-gold: #b8860b;
+    --white: #fffafa;
+    --red: #800000;
+    --edit: #b0e0e6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+body {
+    background-color: var(--primary);
+    color: var(--light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+#chore-form {
+    display: flex;
+}
+
+#chore-input {
+    flex: 1 1 0%;
+    background-color: var(--dark);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--light);
+    font-size: 1.25rem; 
+}
+
+#chore-input::placeholder {
+    color: var(--light);
+}
+
+#chore-submit {
+    background: none;
+    border: none;
+    background-color: var(--gold);
+    border-radius: 1.5rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.4s;
+}
+
+#chore-submit:hover {
+    cursor: pointer;
+    background-color: var(--dark-gold);
+    transition: 0.4s;
+}
+
+main {
+    flex: 1 1 0%;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.chore-list {
+    padding: 1rem;
+}
+
+.chore-list h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+#chores .chore {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#chores .chore .content {
+    flex: 1 1 0%;
+}
+
+#chores .chore .content .text {
+    background: none;
+    border: none;
+    color: var(--light);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#chores .chore .content .text:not(:read-only) {
+    background-color: var(--dark);
+}
+
+#chores .chore .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.chore .actions button {
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: .75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.chore .actions button:hover {
+    opacity: 0.8;
+
+}
+
+.chore .actions button:active {
+    opacity: 0.67;
+}
+
+.chore .actions .edit {
+    background-color: var(--edit);
+}
+
+.chore .actions .delete {
+    background-color: var(--red);
+    color: var(--white);
+}
